@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derudz Automotive - Premium Detailing & Protection</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Colors for Automotive Niche */
+        :root {
+            --primary: #ef4444; /* Red for automotive energy/speed */
+            --primary-hover: #dc2626;
+            --dark: #111827;
+            --gray-light: #f9fafb;
+            --gray-border: #e5e7eb;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-padding {
+            padding-top: 5rem; /* 80px */
+            padding-bottom: 5rem; /* 80px */
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3.75rem; /* 60px */
+                padding-bottom: 3.75rem; /* 60px */
+            }
+        }
+
+        /* Accordion Styles */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- SECTION 1: TOP BAR -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100 py-4">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <!-- Logo Left -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-slate-900 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-car-side text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-slate-900 tracking-tight">DERUDZ AUTO</span>
+            </a>
+            
+            <!-- CTA Right -->
+            <a href="#final-cta" class="btn-primary px-6 py-3 rounded-lg font-semibold text-sm md:text-base whitespace-nowrap">
+                Book Your Appointment
+            </a>
+        </div>
+    </nav>
+
+    <!-- SECTION 2: HERO SECTION -->
+    <section class="section-padding bg-white overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                
+                <!-- LEFT COLUMN (60%) -->
+                <div class="w-full lg:w-[60%] flex flex-col items-start text-left">
+                    
+                    <!-- Star Rating First -->
+                    <div class="mb-6 inline-flex flex-col">
+                        <div class="flex items-center gap-1 text-yellow-400 text-xl mb-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500">4.9 Star Rating Based on 500+ Verified Reviews</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Restore Your Vehicle's Showroom Shine With Expert Detailing
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
+                        From paint correction to ceramic coating, we provide premium automotive care that protects your investment and turns heads everywhere you drive.
+                    </p>
+
+                    <!-- Primary CTA -->
+                    <a href="#final-cta" class="btn-primary px-8 py-4 rounded-xl text-lg font-bold shadow-lg">
+                        Get Your Free Quote
+                    </a>
+                </div>
+
+                <!-- RIGHT COLUMN (40%) -->
+                <div class="w-full lg:w-[40%] h-full flex items-center justify-center">
+                    <div class="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Professional detailing a luxury car" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PR FEATURE / CREDIBILITY BAR -->
+    <section class="py-10 bg-gray-50 border-y border-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">Trusted by Enthusiasts & Certified By Leaders</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Using FontAwesome icons as logo placeholders for brands/certifications -->
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-700"><i class="fa-solid fa-shield-halved text-3xl"></i> Ceramic Pro</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-700"><i class="fa-solid fa-spray-can-sparkles text-3xl"></i> SunTek</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-700"><i class="fa-solid fa-award text-3xl"></i> IDA Certified</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-700"><i class="fa-solid fa-star text-3xl"></i> Yelp Elite</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PRE-TESTIMONIALS -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"My Tesla looks better than the day I bought it. The attention to detail is unmatched."</p>
+                    <p class="font-bold text-slate-900">— Alex R.</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Professional, punctual, and the ceramic coating has kept my car clean for months."</p>
+                    <p class="font-bold text-slate-900">— Sarah M.</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Finally found a detailer who knows how to handle exotic cars. Highly recommend."</p>
+                    <p class="font-bold text-slate-900">— David K.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: BUYER OBJECTION HANDLER -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                
+                <!-- LEFT COLUMN (40%) Image -->
+                <div class="w-full lg:w-[40%] h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Detailer polishing a car hood" 
+                         class="w-full h-full object-cover">
+                </div>
+
+                <!-- RIGHT COLUMN (60%) Content -->
+                <div class="w-full lg:w-[60%]">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose Derudz Auto? Protect Your Investment.</h2>
+                    <p class="text-gray-600 mb-8 text-lg">We know you love your car. Our process is designed to preserve its value and appearance using only the safest, highest-grade products.</p>
+                    
+                    <ul class="space-y-6 mb-8">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-lg">Why Now? Prevent Permanent Damage</h3>
+                                <p class="text-gray-600 text-sm mt-1">UV rays, bird droppings, and road salt eat away at your clear coat. Acting now prevents costly repainting later.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fa-solid fa-medal"></i></div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-lg">Why Us? Certified Specialists</h3>
+                                <p class="text-gray-600 text-sm mt-1">We aren't just a car wash. We are certified installers of top-tier protection films and coatings with years of experience.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fa-solid fa-check-double"></i></div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-lg">Is This For You? Every Car Matters</h3>
+                                <p class="text-gray-600 text-sm mt-1">Whether it's a daily driver or a weekend exotic, we tailor our packages to fit your specific needs and budget.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#final-cta" class="btn-primary px-6 py-3 rounded-lg font-semibold inline-block">Get Peace of Mind Today</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: MORE TESTIMONIALS -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">Don't Just Take Our Word For It: Verified Reviews</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-700 mb-4">"The paint correction was magic. They removed swirls I thought were permanent. <strong>Absolutely stunning results.</strong>"</p>
+                    <p class="font-bold text-slate-900">Michael B. (BMW Owner)</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-700 mb-4">"I was worried about leaving my car, but they treated it like their own. <strong>Trustworthy and skilled.</strong>"</p>
+                    <p class="font-bold text-slate-900">Jennifer L. (Tesla Model 3)</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-700 mb-4">"Best interior cleaning I've ever had. They got stains out that I've been trying to remove for years."</p>
+                    <p class="font-bold text-slate-900">Robert T. (Truck Owner)</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-700 mb-4">"Fair pricing for the level of service. The ceramic coating makes washing my car so easy now."</p>
+                    <p class="font-bold text-slate-900">Amanda K. (Audi Owner)</p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-700 mb-4">"They explained every step of the process. No upsells, just great advice and execution."</p>
+                    <p class="font-bold text-slate-900">Chris W. (Porsche Owner)</p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-700 mb-4">"Fast turnaround time without compromising quality. Will definitely be back for my annual service."</p>
+                    <p class="font-bold text-slate-900">Sarah J. (Mercedes Owner)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: VALUE STACK SECTION -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">The 4 Pillars of Premium Auto Care</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                
+                <!-- COLUMN 1 (LEFT - 30%) -->
+                <div class="w-full lg:w-[30%] flex flex-col justify-between gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="text-4xl mb-4 text-red-600"><i class="fa-solid fa-gem"></i></div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Premium Products</h3>
+                        <p class="text-gray-600 text-sm">We use only industry-leading brands like Ceramic Pro and SunTek for lasting durability.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="text-4xl mb-4 text-red-600"><i class="fa-solid fa-user-shield"></i></div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Fully Insured</h3>
+                        <p class="text-gray-600 text-sm">Your vehicle is protected while in our care. We take safety and security seriously.</p>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2 (CENTER - 40%) -->
+                <div class="w-full lg:w-[40%] h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-lg relative">
+                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Car detailing tools and products" 
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-slate-900/20"></div>
+                </div>
+
+                <!-- COLUMN 3 (RIGHT - 30%) -->
+                <div class="w-full lg:w-[30%] flex flex-col justify-between gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="text-4xl mb-4 text-red-600"><i class="fa-solid fa-clock"></i></div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Efficient Service</h3>
+                        <p class="text-gray-600 text-sm">We respect your time. Most services are completed within 24-48 hours.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="text-4xl mb-4 text-red-600"><i class="fa-solid fa-certificate"></i></div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Warranty Backed</h3>
+                        <p class="text-gray-600 text-sm">Our coatings and films come with manufacturer warranties for your peace of mind.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#final-cta" class="btn-primary px-8 py-4 rounded-xl text-lg font-bold shadow-lg">Start Your Transformation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BEFORE & AFTER SECTION -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">Quality You Can See: The Derudz Difference</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+                
+                <!-- LEFT BOX (BEFORE) -->
+                <div class="w-full md:w-1/2 bg-red-50 border border-red-100 rounded-2xl p-8 flex flex-col items-start">
+                    <div class="bg-red-100 text-red-600 px-4 py-1 rounded-full text-sm font-bold mb-4">BEFORE</div>
+                    <div class="text-4xl text-red-500 mb-4"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Dull, Swirled, and Unprotected</h3>
+                    <p class="text-gray-700 mb-6">Oxidized paint, visible swirl marks from improper washing, and interior stains that make your car look older than it is.</p>
+                </div>
+
+                <!-- RIGHT BOX (AFTER) -->
+                <div class="w-full md:w-1/2 bg-green-50 border border-green-100 rounded-2xl p-8 flex flex-col items-start">
+                    <div class="bg-green-100 text-green-600 px-4 py-1 rounded-full text-sm font-bold mb-4">AFTER</div>
+                    <div class="text-4xl text-green-500 mb-4"><i class="fa-solid fa-sparkles"></i></div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Glossy, Protected, and Pristine</h3>
+                    <p class="text-gray-700 mb-6">Mirror-like finish with deep reflection, hydrophobic protection that repels water, and a fresh, detailed interior.</p>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#final-cta" class="btn-primary px-8 py-4 rounded-xl text-lg font-bold shadow-lg">Request Your Free Quote Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: VIDEO TESTIMONIAL SECTION -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Client Video Reviews: Why Detail Matters</h2>
+                <p class="text-gray-600 text-lg">Hear directly from satisfied car owners about the Derudz difference—precision, care, and incredible results.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-center max-w-6xl mx-auto">
+                
+                <!-- LEFT COLUMN (40%) Video -->
+                <div class="w-full lg:w-[40%]">
+                    <div class="relative aspect-video bg-slate-900 rounded-xl overflow-hidden shadow-xl cursor-pointer group">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center pl-1 shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-red-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">Click to watch the full testimonial (1:45 min)</p>
+                </div>
+
+                <!-- RIGHT COLUMN (60%) Text -->
+                <div class="w-full lg:w-[60%]">
+                    <div class="flex text-yellow-400 mb-4 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">"They Treated My Car Like Art"</h3>
+                    <blockquote class="text-lg text-gray-700 italic mb-6 leading-relaxed">
+                        "I was hesitant to spend this much on detailing, but seeing the results blew me away. <strong>The paint correction removed years of wear.</strong> It looks better than when I picked it up from the dealer."
+                    </blockquote>
+                    <div class="border-l-4 border-red-500 pl-4">
+                        <p class="font-bold text-slate-900">— Mark and Lisa D., Verified Customers</p>
+                        <p class="text-sm text-gray-500">Video Testimonial</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FAQ SECTION -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Common Questions & Service Details</h2>
+                <p class="text-gray-600">Addressing the important details on pricing, timing, and care.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <details class="group bg-white border border-gray-200 rounded-lg open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 p-6 cursor-pointer list-none">
+                        How long does a full detail take?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-red-500"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-6 pb-6 pt-0">
+                        A full detail typically takes 4-6 hours. Paint correction and ceramic coating services may require 1-3 days depending on the condition of the vehicle.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-gray-200 rounded-lg open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 p-6 cursor-pointer list-none">
+                        How often should I detail my car?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-red-500"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-6 pb-6 pt-0">
+                        We recommend a maintenance wash every 2 weeks and a full detail every 6-12 months to keep your protection warranty valid and your car looking new.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-gray-200 rounded-lg open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 p-6 cursor-pointer list-none">
+                        Is ceramic coating worth it?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-red-500"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-6 pb-6 pt-0">
+                        Absolutely. It provides long-term protection against UV rays, chemicals, and minor scratches, while making your car much easier to clean and maintain.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-gray-200 rounded-lg open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 p-6 cursor-pointer list-none">
+                        Do you offer mobile services?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-red-500"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-6 pb-6 pt-0">
+                        Yes, we have a fully equipped mobile unit for basic detailing services. However, paint correction and coatings must be done in our controlled studio environment.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-gray-200 rounded-lg open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 p-6 cursor-pointer list-none">
+                        What payment methods do you accept?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-red-500"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-6 pb-6 pt-0">
+                        We accept all major credit cards, debit cards, and cash. Payment is due upon completion of the service.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: FINAL CTA SECTION -->
+    <section id="final-cta" class="section-padding bg-slate-900 text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                
+                <!-- LEFT COLUMN (50%) -->
+                <div class="w-full lg:w-[50%]">
+                    <div class="flex text-yellow-400 mb-6 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Ready for a Car That Turns Heads?</h2>
+                    <p class="text-lg text-gray-300 mb-8">Schedule your <strong class="text-white">free, zero-obligation estimate</strong> today. We guarantee transparent pricing and showroom-quality results, every time.</p>
+                    
+                    <div class="flex items-center gap-4 bg-slate-800 p-4 rounded-lg inline-block">
+                        <div class="bg-green-500 p-3 rounded-full">
+                            <i class="fa-solid fa-phone text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Call Us Directly</p>
+                            <a href="tel:5555555555" class="text-2xl font-bold text-white hover:text-red-400 transition-colors">(555) 555-5555</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (50%) Form -->
+                <div class="w-full lg:w-[50%]">
+                    <div class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-slate-900">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Book Your Appointment</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" placeholder="(555) 123-4567">
+                            </div>
+                            <div>
+                                <label for="car" class="block text-sm font-medium text-gray-700 mb-1">Vehicle Model & Service Needed</label>
+                                <textarea id="car" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" placeholder="2022 BMW M3 - Ceramic Coating..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary py-4 rounded-lg font-bold text-lg shadow-md mt-2">
+                                Schedule Free Estimate Now
+                            </button>
+                            <p class="text-xs text-center text-gray-500 mt-4">By submitting, you agree to receive communications from Derudz Auto. No spam, ever.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: FOOTER -->
+    <footer class="bg-gray-50 pt-12 pb-8 border-t border-gray-200">
+        <div class="container mx-auto px-4 md:px-6">
+            
+            <!-- ROW 1: Logo -->
+            <div class="flex justify-center items-center py-8">
+                <div class="flex items-center gap-2">
+                    <div class="bg-slate-900 text-white p-2 rounded-lg">
+                        <i class="fa-solid fa-car-side text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-slate-900 tracking-tight">DERUDZ AUTO</span>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+            <!-- ROW 2: Copyright & Links -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                
+                <!-- Left: Copyright -->
+                <div class="text-gray-500 text-sm text-center md:text-left">
+                    © 2026. Derudz Automotive. All Rights Reserved.
+                </div>
+
+                <!-- Right: Links -->
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Cookies Settings</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
